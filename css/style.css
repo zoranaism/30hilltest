@@ -151,15 +151,22 @@ input[type="checkbox"]:focus
 	padding: 8px 0;
 	font-size: 13px;
 }
-
+.btn, a, .table>tbody>tr {
+	-webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #D7D7D7;
+}
 
 /* ================ HELPERS =================== */
 .txt-dark-gray {
 	color: #3b4350;
 	font-weight: 600;
-}
-.txt-gray {
-
 }
 .txt-light-gray {
 	color: #c0c7cf;
@@ -199,11 +206,15 @@ input[type="checkbox"]:focus
 	float: left;
 	width: 100px;
 	overflow: visible;
+	height: 811px;
+    margin-bottom: -30px;
+    background-color: #262632;
 }
 .main-nav-tabs {
 	float: left;
 	width: 100px;
 	border-bottom: 0;
+	height: 811px;
 }
 .main-nav-tabs>li.active>a, 
 .main-nav-tabs>li.active>a:hover, 
@@ -331,6 +342,7 @@ input[type="checkbox"]:focus
 	height: 40px;
 }
 .search-input {
+	margin-right: 120px;
 }
 .search-input > input {
 	height: 40px;
@@ -371,6 +383,7 @@ box-shadow: 0px 0px 2px 1px rgba(99,99,99,0.2);
 	background-color: #f6f6f6;
 	border-right: 3px solid #dce0e1; 
 	padding: 20px;
+	height: 685px;
 }
 .email-tabs > li {
 	margin-right: 10px;
@@ -499,6 +512,7 @@ td>a:active {
 	padding: 35px 25px;
 	border-right: 2px dotted #d4d4d4;
 	width: 45%;
+	height: 685px;
 }
 .profile-details .media-object{
 	height: 70px;
