@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- SCALABILITY, DEVICE SUPPORT -->
+    <meta name="viewport" content="width=device-width, user-scalable=1.0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">  
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    
+    <!-- META DESCRIPTION -->
+    <meta name="author" content="Zorana Lazarevic" />
+    <meta name="description" content="Test 30Hill made by Zorana Lazarevic" />
+    <meta name="keywords" content="test, testing, coder, front end developer, job, new job, new position" />
+
+    <!-- CSS -->
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap checkbox/radiobuttons -->
+    <link type="text/css" rel="stylesheet" href="css/awesome-bootstrap-checkbox.css"/>
+    <!-- style -->
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    
+    <!-- FONTS -->
+    <!-- font awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row page">
+
+        <!-- MAIN NAVIGATION - tabs -->
+        <div class="main-nav">
+
+          <!-- main navigation list -->
+          <ul class="nav nav-tabs main-nav-tabs" id="main-tabs">
+            <li><a href="#dashboard" data-toggle="tab"><i class="fa fa-2x fa-tachometer"></i>Dashboard</a></li>
+            <li><a href="#contacts" data-toggle="tab"><i class="fa fa-2x fa-book"></i>Contacts</a></li>
+            <li><a href="#messages" data-toggle="tab"><i class="fa fa-2x fa-envelope"></i>Messages</a></li>
+            <li><a href="#inventory" data-toggle="tab"><i class="fa fa-2x fa-bar-chart"></i>Inventory</a></li>
+            <li><a href="#orders" data-toggle="tab"><i class="fa fa-2x fa-shopping-cart"></i>Orders</a></li>
+            <li><a href="#sites" data-toggle="tab"><i class="fa fa-2x fa-external-link"></i>Sites</a></li>
+            <li><a href="#marketplace" data-toggle="tab"><i class="fa fa-2x fa-external-link"></i>Marketplace</a></li>
+          </ul><!-- /main navigation list -->
+
+          <!-- main navigation tab content -->
+          <div class="tab-content main-nav-content" id="slide-content">
+            <div class="tab-pane fade" id="dashboard">
+              <h3>Dashboard</h3>
+            </div>
+            <!-- contact panel -->
+            <div class="tab-pane fade active" id="contacts">
+              <h3>Contacts</h3>
+              <!-- contact list -->
+              <div class="list-group contact-list">
+                <a href="#" class="list-group-item active contact-item"><i class="fa fa-caret-right"></i><span class="contact-item">All contacts</span></a>
+                <a href="#" class="list-group-item contact-item"><i class="fa fa-caret-right"></i><span class="contact-item">Favourites</span></a>
+                <a href="#" class="list-group-item contact-item"><i class="fa fa-caret-right"></i><span class="contact-item">Unauthorised</span></a>
+              </div><!-- /contact list -->
+
+              <!-- tags list -->
+              <div class="panel panel-default contact-sub-list">
+                <div class="panel-heading">Tags<i class="fa fa-2x fa-plus pull-right"></i></div>
+                <div class="panel-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item"><i class="fa fa-circle-o pull-right blue-circle"></i>All contacts</a>
+                    <a href="#" class="list-group-item"><i class="fa fa-circle-o pull-right purple-circle"></i>Favourites</a>
+                    <a href="#" class="list-group-item"><i class="fa fa-circle-o pull-right orange-circle"></i>Unauthorised</a>
+                  </div><!-- /contact list -->
+                </div>
+              </div><!-- /tags list -->
+
+              <!-- groups list -->
+              <div class="panel panel-default contact-sub-list">
+                <div class="panel-heading">Groups<i class="fa fa-2x fa-plus pull-right"></i></div>
+                <div class="panel-body">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item"><i class="fa fa-circle-o pull-right alice-circle"></i>All contacts</a>
+                    <a href="#" class="list-group-item"><i class="fa fa-circle-o pull-right green-circle"></i>Favourites</a>
+                    <a href="#" class="list-group-item"><i class="fa fa-circle-o pull-right white-circle"></i>Unauthorised</a>
+                  </div><!-- /contact list -->
+                </div>
+              </div><!-- /groups list -->
+
+            </div> <!-- /contact panel -->
+            <div class="tab-pane fade" id="messages">
+              <h3>Messages</h3>
+            </div>
+            <div class="tab-pane fade" id="inventory">
+              <h3>Inventory</h3>
+            </div>
+            <div class="tab-pane fade" id="orders">
+              <h3>Orders</h3>
+            </div>
+            <div class="tab-pane fade" id="sites">
+              <h3>Sites</h3>
+            </div>
+            <div class="tab-pane fade" id="marketplace">
+              <h3>Marketplace</h3>
+            </div>
+          </div><!-- /main navigation tab content -->
+        </div>
+        <!-- /MAIN NAVIGATION - tabs  -->
+
+        <!-- PAGE CONTENT -->
+        <div class="page-content"> 
+          <!-- page header -->
+          <div class="page-header">
+            <h3 class="pull-left">All contacts</h3>
+            <!-- search -->
+            <form class="form-inline pull-right">
+              <div class="form-group search-input-group">
+                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                <div class="input-group search-input">
+                  <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Search Contact by name / email / tag / phone number">
+                </div>
+              </div>
+              <!-- buttons -->
+              <button type="button" class="btn btn-primary large-blue-button">
+                <span class="fa fa-1x fa-plus" aria-hidden="true"></span> Add new contacts
+              </button>
+              <!-- dropdown button -->
+              <div class="btn-group large-black-button">
+                <button type="button" class="btn btn-primary">
+                  <span class="fa fa-1x fa-plus" aria-hidden="true"></span> Import from
+                </button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div>
+            </form>
+          </div><!-- /page header -->
+
+          <!-- page container -->
+          <div class="container-fluid">
+            <div class="row page-container">
+
+              <!-- left side email section -->
+              <div class="col-md-4 left-side-section"> 
+
+                <!-- left side section tabs -->
+                <ul class="nav nav-tabs email-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#people" aria-controls="home" role="tab" data-toggle="tab">People</a></li>
+                  <li role="presentation"><a href="#companies" aria-controls="profile" role="tab" data-toggle="tab">Companies</a></li>
+                  <li class="sub-text">1267 contacts</li>
+                </ul><!-- /left side section tabs -->
+
+                <!-- left side section tabs content -->
+                <div class="tab-content email-tab-content">
+                  <div role="tabpanel" class="tab-pane fade active" id="people">
+                    <table class="table table-hover">
+                      <!-- table header -->
+                      <thead>
+                        <th>
+                          <div class="checkbox checkbox-primary">
+                            <input type="checkbox" id="checkbox1"><label for="checkbox1"></label>
+                          </div>
+                        </th>
+                        <th colspan="2">Select all</th>
+                        <th colspan="3" style="text-align: right;">
+                          <button type="button" class="btn btn-default btn-sm">
+                            <span class="fa fa-1x fa-tag" aria-hidden="true"></span> Set Tag
+                          </button>
+                          <button type="button" class="btn btn-default btn-sm">
+                            <span class="fa fa-1x fa-trash-o" aria-hidden="true"></span> Delete
+                          </button>
+                        </th>
+                      </thead><!-- /table header -->
+                      <!-- table rows - emails -->
+                      <tbody>                     
+                        <tr class="blue-sender">
+                          <td class="checkbox-column">
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="checkbox2"><label for="checkbox2"></label>
+                            </div>
+                          </td>
+                          <td class="img-column">
+                            <div class="img-circle table-image">CH</div>
+                          </td>
+                          <td class="col-md-4">
+                            <a href="#">
+                              Cheryl Hanson
+                            </a>
+                          </td>
+                          <td class="col-md-4" style="font-style: italic;">
+                           Company name
+                          </td>
+                          <td class="smalles-column">
+                           <div class="unreaded-circle"></div>
+                          </td>
+                          <td class="smalles-column">
+                            <form action="">
+                              <input class="star" id="star" type="radio" name="star"/>
+                              <label class="star" for="star"></label>
+                            </form>
+                          </td>
+                        </tr>
+                        <tr class="purple-sender">
+                          <td class="checkbox-column">
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="checkbox3"><label for="checkbox3"></label>
+                            </div>
+                          </td>
+                          <td class="img-column">
+                            <div class="table-image">ZL
+                            </div>
+                          </td>
+                          <td class="col-md-4">
+                            <a href="#">
+                              Zorana Lazarevic
+                            </a>
+                          </td>
+                          <td class="col-md-4" style="font-style: italic;">
+                            Company name
+                          </td>
+                          <td class="smalles-column">
+                           <div class="unreaded-circle"></div>
+                          </td>
+                          <td class="smalles-column">
+                            <form action="">
+                              <input class="star" id="star-1" type="radio" name="star"/>
+                              <label class="star" for="star-1"></label>
+                            </form>
+                          </td>
+                        </tr>    
+                        <tr class="purple-sender">
+                          <td class="checkbox-column">
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="checkbox4"><label for="checkbox4"></label>
+                            </div>
+                          </td>
+                          <td class="img-column">
+                            <div class="table-image">
+                              <img class="img-circle" src="img/sender-img1.jpg" alt="Sender Image" />
+                            </div>
+                          </td>
+                          <td class="col-md-4">
+                            <a href="#">
+                              Zorana Lazarevic
+                            </a>
+                          </td>
+                          <td class="col-md-4" style="font-style: italic;">
+                            Company name
+                          </td>
+                          <td class="smalles-column">
+                           <div class="unreaded-circle"></div>
+                          </td>
+                          <td class="smalles-column">
+                            <form action="">
+                              <input class="star" id="star-2" type="radio" name="star"/>
+                              <label class="star" for="star-2"></label>
+                            </form>
+                          </td>
+                        </tr>  
+                        <tr class="gray-sender">
+                          <td class="checkbox-column">
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="checkbox2"><label for="checkbox2"></label>
+                            </div>
+                          </td>
+                          <td class="img-column">
+                            <div class="table-image">ZL
+                            </div>
+                          </td>
+                          <td class="col-md-4">
+                            <a href="#">
+                              Zorana Lazarevic
+                            </a>
+                          </td>
+                          <td class="col-md-4" style="font-style: italic;">
+                            Company name
+                          </td>
+                          <td class="smalles-column">
+                           <div class="unreaded-circle"></div>
+                          </td>
+                          <td class="smalles-column">
+                            <form action="">
+                              <input class="star" id="star-3" type="radio" name="star"/>
+                              <label class="star" for="star-3"></label>
+                            </form>
+                          </td>
+                        </tr>  
+                      </tbody><!-- /table rows - emails -->
+                    </table>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="companies">
+                    
+                  </div>
+                </div><!-- /left side section tabs content -->
+
+              </div><!-- /left side email section -->
+
+              <!-- right side email details section -->
+              <div class="col-md-8 right-side-section">
+                <div class="row">
+
+                  <!-- sender profile details -->
+                  <div class="profile-details">
+                    <div class="media mrg-btm-30">
+                      <div class="media-left">
+                        <a href="#">
+                          <img class="media-object img-circle" src="img/sender-img1.jpg" alt="Sender Name Image">
+                          <div class="gender-icon"><i class="fa fa-venus"></i></div>
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <div class="pull-left mrg-btm-10">
+                          <div class="txt-dark-gray">Jill Valentine</div>
+                          <div class="txt-light-gray">DOB: 23 June, 1988</div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm pull-right small-blue-button">
+                          <span class="fa fa-envelope" aria-hidden="true"></span> Email
+                        </button>
+                        <div class="clearfix"></div>
+                        <div class="pull-left mrg-rgt-10">
+                          <div class="txt-dark-gray small-txt">22385</div>
+                          <div class="txt-light-gray small-txt">Total orders</div>
+                        </div>
+                        <div class="pull-left">
+                          <div class="txt-dark-gray small-txt">$ 1.234.567</div>
+                          <div class="txt-light-gray small-txt">Total Payment</div>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-sm pull-right small-icon-button">
+                          <span class="fa fa-trash-o" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-sm pull-right mrg-rgt-5 small-icon-button">
+                          <span class="fa fa-pencil" aria-hidden="true"></span>
+                        </button>
+
+                      </div>
+                    </div>
+
+                    <!-- tags -->
+                    <div class="tags mrg-btm-30 clearfix">
+                      <div class="tag"> Supplies
+                        <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <button type="button" class="btn btn-sm add-tag">
+                        <span class="fa fa-plus mrg-rgt-5" aria-hidden="true"></span> Add tag
+                      </button>
+                    </div><!-- /tags -->
+
+                  <!-- other info collapse -->
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <!-- occupation -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" href="#occupation" aria-expanded="true" aria-controls="occupation">
+                            Occupation
+                            <i class="fa fa-chevron-down pull-right"></i>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="occupation" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                          <table class="table-profile-info">
+                            <tbody>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-suitcase"></i></td>
+                                <td class="col-md-3 txt-light-gray">Position</td>
+                                <td>Product Manager</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-building"></i></td>
+                                <td class="col-md-3 txt-light-gray">Company</td>
+                                <td>CocaCola.Inc</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /occupation -->
+                    <!-- contacts -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" href="#profile-contacts" aria-expanded="false" aria-controls="profile-contacts">
+                            Contacts
+                            <i class="fa fa-chevron-down pull-right"></i>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="profile-contacts" class="panel-collapse collapse" role="tabpanel" aria-labelledby="profile-contacts">
+                        <div class="panel-body">
+                          <table class="table-profile-info">
+                            <tbody>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-phone"></i></td>
+                                <td class="col-md-3 txt-light-gray">Phone 1</td>
+                                <td>+44 444 234 14</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-mobile"></i></td>
+                                <td class="col-md-3 txt-light-gray">Mobile</td>
+                                <td>+44 444 234 14</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"></td>
+                                <td class="col-md-3 txt-light-gray"></td>
+                                <td>+44 444 234 14</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-envelope"></i></td>
+                                <td class="col-md-3 txt-light-gray">Email</td>
+                                <td>julijamiliana@gmail.com</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-skype"></i></td>
+                                <td class="col-md-3 txt-light-gray">Skype</td>
+                                <td>julijamiliana</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /contacts -->
+                    <!-- social -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" href="#social" aria-expanded="false" aria-controls="social">
+                            Social
+                            <i class="fa fa-chevron-down pull-right"></i>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="social" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                        <table class="table-profile-info">
+                            <tbody>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-facebook"></i></td>
+                                <td class="col-md-4 txt-light-gray">Facebook</td>
+                                <td>+44 444 234 14</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-twitter"></i></td>
+                                <td class="col-md-4 txt-light-gray">Twitter</td>
+                                <td>+44 444 234 14</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-google-plus"></i></td>
+                                <td class="col-md-4 txt-light-gray">Google Plus</td>
+                                <td>+44 444 234 14</td>
+                              </tr>
+                              <tr>
+                                <td class="col-md-1 txt-light-gray txt-cnt"><i class="fa fa-pinterest"></i></td>
+                                <td class="col-md-4 txt-light-gray">Pinterest</td>
+                                <td>julijamiliana@gmail.com</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /social -->
+                    <!-- address -->
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" href="#address" aria-expanded="false" aria-controls="address">
+                            Address
+                            <i class="fa fa-chevron-down pull-right"></i>
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="address" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /address -->
+                  </div>
+                  <!-- /other info collapse -->
+
+                  </div><!-- /sender details -->
+
+                  <!-- sender activity feed -->
+                  <div class="activity-feed">
+                    <!-- activity feed header -->
+                    <div class="clearfix mrg-btm-30">
+                      <div class="pull-left">
+                        <div class="txt-dark-gray">Activity FEEDS</div>
+                        <div class="txt-light-gray">Last login: 23 June, 1988</div>             
+                      </div>
+                      <form class="form-inline pull-right">
+                        <div class="form-group search-input-group">
+                          <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+                          <div class="input-group">
+                            <input type="text" class="form-control" id="exampleInputAmount" placeholder="Search by keywords">
+                            <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                          </div>
+                        </div>
+                      </form>               
+                    </div><!-- /activity feed header -->
+                    <!-- activity feed content -->
+                    <div class="activity-feed-content">
+                      <!-- message post -->
+                      <div class="single-feed-post unreaded message">
+                        <div class="pull-left mrg-rgt-15">
+                          <div class="post-icon">
+                            <i class="fa fa-envelope"></i>
+                            <span class="unreaded-badge"></span>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <div><a href="#">Jill Valentine</a> sent a message <a href="#">via Gmail</a></div>
+                          <div class="txt-light-gray small-txt mrg-btm-15">10:00 pm &#124; 23 June, 1988</div> 
+                          <div class="text-popover mrg-btm-10">
+                            <div class="arrow"></div>            
+                            Fruitcake cotton candy donut. Tiramisu brownie brownie liquorice marshmallow pudding pie soufflé. Tart powder pudding donut soufflé donut chocolate cake pudding. Topping candy pie lollipop muffin tootsie roll pie gummies.
+                            <div class="pull-right replied">
+                              replied
+                            </div>
+                          </div>
+                          <div class="post-info">
+                            <div class="pull-left mrg-rgt-5">
+                              <div class="img-circle circle-small ">CH</div>
+                            </div>
+                            <div>Andreah replied in 4 min</div>  
+                            <a href="#" class="read-post-link">Read</a>                          
+                          </div>
+                        </div>
+                      </div><!-- /message post -->
+                      <!-- delivery post -->
+                      <div class="single-feed-post delivery">
+                        <div class="pull-left mrg-rgt-15">
+                          <div class="post-icon">
+                            <i class="fa fa-list"></i>
+                          </div>
+                        </div>
+                        <div class="post-content">
+                          <div><a href="#">Jill Valentine</a> placed an Order on <a href="#">via Gmail</a></div>
+                          <div class="txt-light-gray small-txt mrg-btm-15">10:00 pm &#124; 23 June, 1988</div> 
+                          <div class="text-popover mrg-btm-10">
+                            <div class="arrow"></div>            
+                            Order #1237
+                            12 Items
+                            <hr />
+                            Total payment: $ 1.000
+                            <div class="pull-right replied">
+                              delivered
+                            </div>
+                          </div>
+                          <div class="post-info">
+                            <div class="pull-left mrg-rgt-5">
+                              <div class="img-circle circle-small ">RC</div>
+                            </div>
+                            <div>Richard recieved this order</div>  
+                            <a href="#" class="read-post-link">Detail</a>                          
+                          </div>
+                        </div>
+                      </div><!-- /delivery post -->
+
+                    </div>
+                  </div><!-- /sender activity feed -->
+
+                </div>
+              </div><!-- /right side email details section -->
+
+            </div>
+          </div><!-- /page container -->
+
+        </div>
+        <!-- /PAGE CONTENT -->
+
+      </div><!-- /row -->
+    </div><!-- /container -->
+
+
+    <!-- SCRIPTS -->
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- script -->
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
